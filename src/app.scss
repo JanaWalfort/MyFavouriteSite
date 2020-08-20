@@ -1,14 +1,53 @@
-.userInfo {
+//.userInfo {
+//  display: flex;
+//  flex-direction: column;
+
+//  p {
+//    text-align: center;
+//  }
+
+//  .btnWrapper {
+//    display: flex;
+//    justify-content: center;
+//    padding-top: 10px;
+//  }
+//}
+
+/* accordion */
+.accordion__item {
   display: flex;
   flex-direction: column;
+}
 
-  p {
-    text-align: center;
-  }
+.input {
+  width: 100%;
+}
 
-  .btnWrapper {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-  }
+.send {
+  text-align: center;
+}
+
+/* filter and search */
+.filter {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+
+.filter-search {
+  width: 165px;
+}
+
+/* Sites */
+.sites {
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 10px;
+}
+
+.site {
+  height: 150px;
+  width: 151px;
+  text-align: center;
 }
