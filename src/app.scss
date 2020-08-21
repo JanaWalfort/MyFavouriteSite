@@ -13,6 +13,15 @@
 //  }
 //}
 
+.background {
+  border-radius: 5px;
+  box-shadow: 1px 5px 10px black ;
+}
+
+.info-txt {
+  padding: 10px 0;
+}
+
 /* accordion */
 .accordion__item {
   display: flex;
@@ -27,23 +36,59 @@
   text-align: center;
 }
 
+.your-sites {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.your-site {
+  padding: 5px 10px 5px 0;
+}
+
+.button {
+  margin: 10px 0;
+}
+
 /* filter and search */
 .filter {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  padding: 10px;
+  padding: 5px;
+  margin-top: 30px;
+}
+
+.filter-icons {
+  display: flex;
+  padding: 5px;
+  margin-left: 30px;
+}
+
+.filter-icon {
+  height: 30px;
+  width: 30px;
+  margin: 0 2px;
+  text-align: center;
+  border: solid #464646 3px;
+  border-radius: 30%;
 }
 
 .filter-search {
   width: 165px;
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
 }
 
 /* Sites */
 .sites {
    display: flex;
    flex-wrap: wrap;
-   margin-top: 10px;
+   margin-top: 20px;
 }
 
 .site {

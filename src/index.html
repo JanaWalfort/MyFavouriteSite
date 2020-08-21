@@ -24,22 +24,24 @@
         <div class="tapp">
             <h1>My Favourite Sites</h1>
 
-            <p class="info-txt">Auf My Favourite Sites kannst dau ganz einfach alle chayns seiten ansehen und deine
+            <p class="info-txt">Auf My Favourite Sites kannst du ganz einfach alle chayns Seiten ansehen und deine
                 Favouriten speichern!</p>
 
             <div class="accordion" data-group="1">
+                <!-- Formular -->
                 <div class="accordion__head">
                     <div class="accordion__head__icon accordion--trigger">
                         <i class="ts-angle-right"></i>
                     </div>
                     <div class="accordion__head__title  accordion--trigger">
-                        Antrag
+                        eigene Seite hinzufügen
                     </div>
                 </div>
                 <div class="accordion__body">
                     <div class="accordion__item">
-                        <!-- Formular -->
-                        <p>Hier kannst du den Antrag ausfüllen um deine Seiten bei My Favourite Sites zu speichern!</p>
+
+                        <p>Hier kannst du einen Antrag ausfüllen um deine Seiten bei My Favourite Sites zu speichern!
+                        </p>
 
                         <input class="input" type="text" placeholder="Name" required>
 
@@ -48,6 +50,25 @@
                         <input class="input" type="text" placeholder="Adresse">
 
                         <input class="input" type="text" placeholder="Kommentar" required>
+                        <div class="your-sites">
+                            <div class="your-site">
+                                <input type="checkbox" class="checkbox" name="check" id="check">
+                                <label for="check">your Site 1</label>
+                            </div>
+                            <div class="your-site">
+                                <input type="checkbox" class="checkbox" name="check" id="check">
+                                <label for="check">your Site 2</label>
+                            </div>
+                            <div class="your-site">
+                                <input type="checkbox" class="checkbox" name="check" id="check">
+                                <label for="check">your Site 3</label>
+                            </div>
+                            <div class="your-site">
+                                <input type="checkbox" class="checkbox" name="check" id="check">
+                                <label for="check">your Site 4</label>
+                            </div>
+                        </div>
+
 
                         <button class="button"> Absenden</button>
                     </div>
@@ -55,46 +76,66 @@
             </div><!-- accordion -->
 
 
-            <div class="filter">
-                <!-- insert icons -->
-                <div class="filter-icons">
 
-                </div>
-                <div class="filter-search">
-                    <input class="input" type="text" placeholder="Suche" required>
-                </div>
-            </div>
 
-            <div class="sites">
-
-                <!-- insert icons + names -->
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/183123?size=57" alt="icon for booktrade">
-                    <p>Booktrade</p>
-                </div>
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/1?size=57" alt="icon for bamboo">
-                    <p>BamBoo! Ahaus</p>
-                </div>
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/1214?size=57" alt="icon for Tobit.Labs">
-                    <p>Tobit.Labs</p>
-                </div>
-
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/167538?size=57" alt="icon for ahauser nextenliebe">
-                    <p>Ahauser nextenliebe</p>
-                </div>
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/240?size=57" alt="icon for take away">
-                    <p>TKWY</p>
-                </div>
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/79061?size=57" alt="icon for next one">
-                    <p>next one</p>
+            <div class="background">
+                <div class="filter">
+                    <!-- icons -->
+                    <div class="filter-icons">
+                        <div class="filter-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="filter-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="filter-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="filter-icon">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="filter-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <div class="filter-search">
+                        <!-- search -->
+                        <input class="input" type="text" placeholder="Suche" required>
+                        <!--<i class="fas fa-search"></i>-->
+                    </div>
                 </div>
 
-            </div><!-- / sites -->
+                <div class="sites">
+
+                    <!-- page icons + names -->
+                    <div class="site">
+                        <img src="https://sub60.tobit.com/l/183123?size=57" alt="icon for booktrade">
+                        <p>Booktrade</p>
+                    </div>
+                    <div class="site">
+                        <img src="https://sub60.tobit.com/l/1?size=57" alt="icon for bamboo">
+                        <p>BamBoo! Ahaus</p>
+                    </div>
+                    <div class="site">
+                        <img src="https://sub60.tobit.com/l/1214?size=57" alt="icon for Tobit.Labs">
+                        <p>Tobit.Labs</p>
+                    </div>
+
+                    <div class="site">
+                        <img src="https://sub60.tobit.com/l/167538?size=57" alt="icon for ahauser nextenliebe">
+                        <p>Ahauser nextenliebe</p>
+                    </div>
+                    <div class="site">
+                        <img src="https://sub60.tobit.com/l/240?size=57" alt="icon for take away">
+                        <p>TKWY</p>
+                    </div>
+                    <div class="site">
+                        <img src="https://sub60.tobit.com/l/79061?size=57" alt="icon for next one">
+                        <p>next one</p>
+                    </div>
+
+                </div><!-- / sites -->
+            </div> <!-- / background -->
         </div> <!-- / tapp -->
     </div> <!-- / app -->
     <script src="https://api.chayns-static.space/js/v4.0/chayns.min.js"></script>
