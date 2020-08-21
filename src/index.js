@@ -1,40 +1,27 @@
-// import login from './utils/login';
 import './app.scss';
-// const handleUserIsLoggedIn = ($introElement, $loginBtn) => {
-//     $introElement.innerText = `Hallo ${chayns.env.user.firstName}`;
-//     $loginBtn.innerText = 'Abmelden';
-//     $loginBtn.addEventListener('click', async () => {
-//         await chayns.logout();
-//         window.location.reload();
-//     });
-// };
 
-// const handleUserIsLoggedOut = ($introElement, $loginBtn) => {
-//     $introElement.innerText = 'Bitte melde dich an';
-//     $loginBtn.innerText = 'Anmelden';
-//     $loginBtn.addEventListener('click', () => {
-//         login(() => handleUserIsLoggedIn($introElement, $loginBtn));
-//     });
-// };
 
-// const init = async () => {
-//     try {
-//         await chayns.ready;
-
-//         const $introElement = document.querySelector('#intro');
-//         const $loginBtn = document.querySelector('#loginBtn');
-
-//         if (chayns.env.user.isAuthenticated) {
-//             handleUserIsLoggedIn($introElement, $loginBtn);
-//         } else {
-//             handleUserIsLoggedOut($introElement, $loginBtn);
-//         }
-//     } catch (err) {
-//         console.error('No chayns environment found', err);
-//     }
-// };
-
-// init();
+// init(); npm install whatwg-fetch --save
 
 chayns.ui.initAll();
 
+// const url = 'https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=love&Skip=0&Take=50';
+
+//fetch('https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=love&Skip=0&Take=50')
+   // .then(resp => resp.json())
+   // .then(data => getData(data.Data));
+
+//function getData(data) {
+    //data.forEach(element => {
+        // const siteId = element.siteId;
+        // const name = element.appstoreName;
+        // const sites = document.createElement('div');
+        // const siteName = document.createElement("P");
+        // siteName.innerText = name;
+        // const pic = document.createElement('img');
+        // pic.src = `https://chayns.tobit.com/storage/${siteId}/Images/icon-57.png`;
+        // document.getElementById("site-name").appendChild(siteName);
+        // document.getElementById("site").appendChild(pic);
+       // console.log('loading');
+    //});
+//}
