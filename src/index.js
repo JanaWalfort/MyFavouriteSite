@@ -1,6 +1,5 @@
 // import login from './utils/login';
 import './app.scss';
-
 // const handleUserIsLoggedIn = ($introElement, $loginBtn) => {
 //     $introElement.innerText = `Hallo ${chayns.env.user.firstName}`;
 //     $loginBtn.innerText = 'Abmelden';
@@ -38,3 +37,4 @@ import './app.scss';
 // init();
 
 chayns.ui.initAll();
+
