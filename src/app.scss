@@ -1,21 +1,6 @@
-//.userInfo {
-//  display: flex;
-//  flex-direction: column;
-
-//  p {
-//    text-align: center;
-//  }
-
-//  .btnWrapper {
-//    display: flex;
-//    justify-content: center;
-//    padding-top: 10px;
-//  }
-//}
-
 .background {
   border-radius: 5px;
-  box-shadow: 1px 5px 10px black ;
+  box-shadow: 1px 5px 10px black;
 }
 
 .info-txt {
@@ -27,16 +12,15 @@
   display: flex;
   flex-direction: column;
 }
-
-.input {
+.weite{
   width: 100%;
 }
+.form-txt {
+  width: 100%;
+  }
 
-.send {
-  text-align: center;
-}
 
-.your-sites {
+/*.your-sites {
   width: 100%;
 
   display: flex;
@@ -46,6 +30,11 @@
 
 .your-site {
   padding: 5px 10px 5px 0;
+}*/
+
+.choosebutton {
+  margin-top: 20px;
+  align-self: flex-end;
 }
 
 .button {
@@ -64,17 +53,17 @@
 
 .filter-icons {
   display: flex;
-  padding: 5px;
-  margin-left: 30px;
+  margin: 0 15px 0 15px;
 }
 
 .filter-icon {
   height: 30px;
   width: 30px;
-  margin: 0 2px;
+  padding: 3px 0 0 0;
+  margin: 0 15px 0 0;
   text-align: center;
-  border: solid #464646 3px;
-  border-radius: 30%;
+  border: solid white 1px;
+  border-radius: 15%;
 }
 
 .filter-search {
@@ -92,7 +81,11 @@
 }
 
 .site {
-  height: 150px;
-  width: 151px;
+  height: auto;
+  width: 95.625px;
+  text-align: center;
+}
+
+.more-button {
   text-align: center;
 }

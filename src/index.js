@@ -35,6 +35,6 @@ import './app.scss';
 //     }
 // };
 
-// init();
+// init(); npm install whatwg-fetch --save
 
 chayns.ui.initAll();
