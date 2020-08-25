@@ -78,12 +78,13 @@
    display: flex;
    flex-wrap: wrap;
    margin-top: 20px;
+   border: solid;
 }
 
 .site {
-  height: auto;
-  width: 95.625px;
+  width: 94,875px;
   text-align: center;
+  align-content: center;
 }
 
 .more-button {
