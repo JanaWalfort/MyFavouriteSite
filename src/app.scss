@@ -77,16 +77,20 @@
 .sites {
    display: flex;
    flex-wrap: wrap;
+   align-items: center;
    margin-top: 20px;
-   border: solid;
 }
 
 .site {
-  width: 94,875px;
-  text-align: center;
-  align-content: center;
+  height: 100px;
+  width: 88px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .more-button {
   text-align: center;
+  pointer-events: none;
 }
