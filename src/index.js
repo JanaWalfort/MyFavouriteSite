@@ -18,6 +18,7 @@ const init = async () => {
        console.log('more button ready!');
 
        document.querySelector('#send-button').addEventListener('click', send);
+       document.querySelector('#search').addEventListener('input', time);
    } catch (err) {
        console.error('No chayns environment found', err);
    }
@@ -26,9 +27,11 @@ const init = async () => {
 init();
 
 let counter = 0;
+let searchString = 'love';
+let timeout;
 
 function getData() {
-   fetch(`https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=love&Skip=${counter}&Take=14`)
+   fetch(`https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=${searchString}&Skip=${counter}&Take=14`)
    .then(resp => resp.json())
    .then((json) => {
       createList(json.Data);
@@ -36,8 +39,23 @@ function getData() {
 }
 
 function createList(data) {
-   console.log(data);
+   // eslint-disable-next-line no-plusplus
+   if (data === null) {
+      document.querySelector('#more').classList.add('hidden');
 
+      const fav = document.createElement('div');
+       fav.classList.add('site');
+       const $sites = document.querySelector('.sites');
+       $sites.appendChild(fav);
+      const error = document.createElement('P');
+      error.innerText = 'Keine Seite gefunden!';
+      fav.appendChild(error);
+
+   } else if (data.length < 14) {
+      document.querySelector('#more').classList.add('hidden');
+   } else {
+      document.querySelector('#more').classList.remove('hidden');
+   }
    // eslint-disable-next-line no-plusplus
    for (let i = 0; i < data.length; i++) {
        const fav = document.createElement('div');
@@ -63,23 +81,39 @@ function createList(data) {
      }
      counter += 14;
 }
+function time() {
+   clearTimeout(timeout);
+   timeout = setTimeout(search, 1000);
+}
+
+async function search() {
+   const { value } = document.querySelector('#search');
+
+   if (value === '' || value === ' ') {
+      searchString = 'love';
+   } else {
+      searchString = value;
+   }
+   const list = document.querySelector('.sites');
+   while (list.firstElementChild) {
+      list.firstElementChild.remove();
+   }
+   counter = 0;
+   getData(value);
+}
 
 function send() {
-   const firstName = chayns.env.user.firstName;
+   const { firstName } = chayns.env.user;
    if (chayns.env.user.isAuthenticated) {
-    const message = document.querySelector('#nameInput').value;
+    const name = document.querySelector('#nameInput').value;
     const email = document.querySelector('#emailInput').value;
     const adress = document.querySelector('#adressInput').value;
     const comment = document.querySelector('#commentInput').value;
 
-    const res = message.concat(email);
-    res.concat(adress);
-    res.concat(comment);
-    console.log(res);
-    // #adressInput, #emailInput, #commentInput
+    const message = `Name: ${name}, e-Mail: ${email}, Adresse: ${adress}, url: '', Kommentar: ${comment}`;
 
     chayns.intercom.sendMessageToPage({
-      text: res
+      text: message
      })
      .then((result) => {
      if (result.ok) {
