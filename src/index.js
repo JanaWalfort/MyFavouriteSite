@@ -1,8 +1,10 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-console */
 import './app.scss';
 
 chayns.ui.initAll();
 chayns.ready.then(() => {
+   getData();
    console.log('Chayns is ready, environment loaded', chayns.env);
  }).catch(() => {
    console.warn('No chayns environment found');
@@ -13,17 +15,16 @@ chayns.ready.then(() => {
 const init = async () => {
    try {
        await chayns.ready;
-       getData();
        document.querySelector('#more').addEventListener('click', getData);
        console.log('more button ready!');
 
-       document.querySelector('#send-button').addEventListener('click', send);
+       const a = document.querySelector('#send-button');
+       a.addEventListener('click', send);
        document.querySelector('#search').addEventListener('input', time);
    } catch (err) {
        console.error('No chayns environment found', err);
    }
 };
-
 init();
 
 let counter = 0;
@@ -50,13 +51,11 @@ function createList(data) {
       const error = document.createElement('P');
       error.innerText = 'Keine Seite gefunden!';
       fav.appendChild(error);
-
    } else if (data.length < 14) {
       document.querySelector('#more').classList.add('hidden');
    } else {
       document.querySelector('#more').classList.remove('hidden');
    }
-   // eslint-disable-next-line no-plusplus
    for (let i = 0; i < data.length; i++) {
        const fav = document.createElement('div');
        fav.classList.add('site');
@@ -76,6 +75,11 @@ function createList(data) {
        const p = document.createElement('P');
        p.innerText = name;
        fav.appendChild(p);
+
+
+       for (let j = 0; j < data.length; j++) {
+         data[i].addEventListener('click', toSite);
+      }
 
        console.log('loaded favorite sites');
      }
@@ -102,6 +106,11 @@ async function search() {
    getData(value);
 }
 
+function toSite() {
+   const link = 'https://booktrade.chayns.net/aboutus';
+   chayns.openUrlInBrowser(link);
+}
+
 function send() {
    const { firstName } = chayns.env.user;
    if (chayns.env.user.isAuthenticated) {
@@ -115,15 +124,12 @@ function send() {
     chayns.intercom.sendMessageToPage({
       text: message
      })
-     .then((result) => {
-     if (result.ok) {
+     .then(() => {
+     if (name && email) {
       chayns.dialog.alert(`${firstName}, das Formular wurde abgeschickt.`);
      } else {
-      chayns.dialog.alert('Es ist ein Fehler aufgetreten.');
+      chayns.dialog.alert('Fülle bitte die Felder Name und e-Mail aus.');
      }
-    })
-    .catch(() => {
-      chayns.dialog.alert('Fülle bitte die Felder Name, e-Mail und Adresse aus.');
     });
    } else {
      chayns.dialog.alert('Login missing', 'To send a message, you have to login.');
