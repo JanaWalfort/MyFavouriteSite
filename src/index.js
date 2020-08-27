@@ -140,5 +140,4 @@ function send() {
    }
   }
 
-  // added very important feature
-  // bugfix
+// test test
