@@ -140,5 +140,3 @@ function send() {
    }
   }
 
-  // added very important feature
-  // bugfix
