@@ -138,3 +138,4 @@ function send() {
      chayns.dialog.alert('Login missing', 'To send a message, you have to login.');
    }
   }
+// hotfix test
