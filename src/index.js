@@ -4,7 +4,8 @@ import './app.scss';
 
 chayns.ui.initAll();
 chayns.ready.then(() => {
-   getData();
+   const data = getData();
+   createList(data);
    console.log('Chayns is ready, environment loaded', chayns.env);
  }).catch(() => {
    console.warn('No chayns environment found');
@@ -16,10 +17,7 @@ const init = async () => {
    try {
        await chayns.ready;
        document.querySelector('#more').addEventListener('click', getData);
-       console.log('more button ready!');
-
-       const a = document.querySelector('#send-button');
-       a.addEventListener('click', send);
+       document.querySelector('#send-button').addEventListener('click', send);
        document.querySelector('#search').addEventListener('input', time);
    } catch (err) {
        console.error('No chayns environment found', err);
@@ -76,9 +74,9 @@ function createList(data) {
        p.innerText = name;
        fav.appendChild(p);
 
-
-       for (let j = 0; j < data.length; j++) {
-         data[i].addEventListener('click', toSite);
+       const list = document.querySelector('#toSite').children;
+       for (let j = 0; j < list.length; j++) {
+         list[j].addEventListener('click', toSite);
       }
 
        console.log('loaded favorite sites');
@@ -107,8 +105,13 @@ async function search() {
 }
 
 function toSite() {
-   const link = 'https://booktrade.chayns.net/aboutus';
-   chayns.openUrlInBrowser(link);
+   const list = fetch(`https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=${searchString}&Skip=${counter}&Take=14`)
+   .then(resp => resp.json())
+   // eslint-disable-next-line arrow-parens
+   .then((json) => json.Data);
+
+   const { siteId } = list;
+   chayns.openUrlInBrowser(`https://chayns.net/${siteId}`);
 }
 
 function send() {
