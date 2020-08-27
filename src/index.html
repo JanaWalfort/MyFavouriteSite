@@ -44,30 +44,37 @@
                             zu speichern!
                         </p>
 
-                        <div class="input-group textInp weite"> 
-                            <input id="nameInput" class="input textInp" type="text" required> 
-                            <label class="user-input" for="name2"> Name </label> 
+                        <div class="input-group textInp weite">
+                            <input id="nameInput" class="input textInp" type="text" required>
+                            <label class="user-input" for="name2"> Name </label>
                         </div>
 
-                        <div class="input-group textInp weite"> 
-                            <input id="emailInput" class="input textInp" type="text" required> 
-                            <label class="user-input" for="name2"> e-Mail </label> 
+                        <div class="input-group textInp weite">
+                            <input id="emailInput" class="input textInp" type="text" required>
+                            <label class="user-input" for="name2"> e-Mail </label>
                         </div>
-                        <div class="input-group textInp weite"> 
-                            <input id="adressInput" class="input textInp" type="text"> 
-                            <label class="user-input" for="name2"> Adresse </label> 
+                        <div class="input-group textInp weite">
+                            <input id="adressInput" class="input textInp" type="text">
+                            <label class="user-input" for="name2"> Adresse </label>
                         </div>
-                        
 
-                        <!-- selectbutton -->
+
+                        <!-- selectbutton <SelectButton
+                                label="Select-Button"
+                                ist={list}
+                                onSelect={(value) => { console.log(value) }}
+                                listKey="id"
+                                listValue="name"/>-->
+                                
                         <button class="choosebutton">Seite</button>
+                        <SelectButton label="Select-Button" list={list}>
 
-                        <div class="input-group textInp weite"> 
-                            <input id="commentInput" class="input textInp" type="text" required> 
-                            <label class="user-input" for="name2"> Kommentar </label> 
-                        </div>
+                            <div class="input-group textInp weite">
+                                <input id="commentInput" class="input textInp" type="text" required>
+                                <label class="user-input" for="name2"> Kommentar </label>
+                            </div>
 
-                        <button id="send-button" class="button"> Absenden</button>
+                            <button id="send-button" class="button"> Absenden</button>
 
 
                     </div>
@@ -99,20 +106,21 @@
                     </div>
                     <div class="filter-search">
                         <!-- search -->
-                        <div class="input-group textInp weite"> 
+                        <div class="input-group textInp weite">
                             <input id="search" class="input textInp" type="text" placeholder='Suche'>
                         </div>
                     </div>
                 </div>
 
-                <div id="toSite" class="sites"> <!-- page icons + names -->
+                <div id="toSite" class="sites">
+                    <!-- page icons + names -->
                 </div><!-- / sites -->
                 <div class="more-button">
                     <button class="button" id="more">
                         Mehr
                     </button>
                 </div>
-                
+
             </div> <!-- / background -->
         </div> <!-- / tapp -->
     </div> <!-- / app -->
@@ -121,4 +129,4 @@
     <script src="https://api.chayns-static.space/ui/v4.0/chayns-ui.min.js"></script>
 </body>
 
-</html>
+</html> <!-- / html -->
