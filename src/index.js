@@ -1,6 +1,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-console */
 import './app.scss';
+// import { SelectButton } from 'chayns-components';
 
 chayns.ui.initAll();
 chayns.ready.then(() => {
@@ -139,5 +140,5 @@ function send() {
    }
   }
 
-// hotfix test
-// hotfix 2
+  // added very important feature
+  // bugfix
