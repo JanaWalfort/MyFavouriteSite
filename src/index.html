@@ -24,77 +24,96 @@
         <div class="tapp">
             <h1>My Favourite Sites</h1>
 
-            <p class="info-txt">Auf My Favourite Sites kannst dau ganz einfach alle chayns seiten ansehen und deine
+            <p class="info-txt">Auf My Favourite Sites kannst du ganz einfach alle chayns Seiten ansehen und deine
                 Favouriten speichern!</p>
 
             <div class="accordion" data-group="1">
+                <!-- Formular -->
                 <div class="accordion__head">
                     <div class="accordion__head__icon accordion--trigger">
                         <i class="ts-angle-right"></i>
                     </div>
                     <div class="accordion__head__title  accordion--trigger">
-                        Antrag
+                        eigene Seite hinzufügen
                     </div>
                 </div>
                 <div class="accordion__body">
                     <div class="accordion__item">
-                        <!-- Formular -->
-                        <p>Hier kannst du den Antrag ausfüllen um deine Seiten bei My Favourite Sites zu speichern!</p>
 
-                        <input class="input" type="text" placeholder="Name" required>
+                        <p class="form-txt">Hier kannst du einen Antrag ausfüllen um deine Seiten bei My Favourite Sites
+                            zu speichern!
+                        </p>
 
-                        <input class="input" type="text" placeholder="e-Mail" required>
+                        <div class="input-group textInp weite"> 
+                            <input id="nameInput" class="input textInp" type="text" required> 
+                            <label class="user-input" for="name2"> Name </label> 
+                        </div>
 
-                        <input class="input" type="text" placeholder="Adresse">
+                        <div class="input-group textInp weite"> 
+                            <input id="emailInput" class="input textInp" type="text" required> 
+                            <label class="user-input" for="name2"> e-Mail </label> 
+                        </div>
+                        <div class="input-group textInp weite"> 
+                            <input id="adressInput" class="input textInp" type="text"> 
+                            <label class="user-input" for="name2"> Adresse </label> 
+                        </div>
+                        
 
-                        <input class="input" type="text" placeholder="Kommentar" required>
+                        <!-- selectbutton -->
+                        <button class="choosebutton">Seite</button>
 
-                        <button class="button"> Absenden</button>
+                        <div class="input-group textInp weite"> 
+                            <input id="commentInput" class="input textInp" type="text" required> 
+                            <label class="user-input" for="name2"> Kommentar </label> 
+                        </div>
+
+                        <button id="send-button" class="button"> Absenden</button>
+
+
                     </div>
                 </div>
             </div><!-- accordion -->
 
 
-            <div class="filter">
-                <!-- insert icons -->
-                <div class="filter-icons">
 
-                </div>
-                <div class="filter-search">
-                    <input class="input" type="text" placeholder="Suche" required>
-                </div>
-            </div>
 
-            <div class="sites">
-
-                <!-- insert icons + names -->
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/183123?size=57" alt="icon for booktrade">
-                    <p>Booktrade</p>
-                </div>
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/1?size=57" alt="icon for bamboo">
-                    <p>BamBoo! Ahaus</p>
-                </div>
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/1214?size=57" alt="icon for Tobit.Labs">
-                    <p>Tobit.Labs</p>
-                </div>
-
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/167538?size=57" alt="icon for ahauser nextenliebe">
-                    <p>Ahauser nextenliebe</p>
-                </div>
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/240?size=57" alt="icon for take away">
-                    <p>TKWY</p>
-                </div>
-                <div class="site">
-                    <img src="https://sub60.tobit.com/l/79061?size=57" alt="icon for next one">
-                    <p>next one</p>
+            <div class="background">
+                <div class="filter">
+                    <!-- icons -->
+                    <div class="filter-icons">
+                        <div class="filter-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="filter-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="filter-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="filter-icon">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="filter-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <div class="filter-search">
+                        <!-- search -->
+                        <div class="input-group textInp weite"> 
+                            <input id="search" class="input textInp" type="text" placeholder='Suche'>
+                        </div>
+                    </div>
                 </div>
 
-            </div><!-- / sites -->
+                <div id="toSite" class="sites"> <!-- page icons + names -->
+                </div><!-- / sites -->
+                <div class="more-button">
+                    <button class="button" id="more">
+                        Mehr
+                    </button>
+                </div>
+                
+            </div> <!-- / background -->
         </div> <!-- / tapp -->
     </div> <!-- / app -->
     <script src="https://api.chayns-static.space/js/v4.0/chayns.min.js"></script>

@@ -1,53 +1,99 @@
-//.userInfo {
-//  display: flex;
-//  flex-direction: column;
+.hidden {
+  display: none;
+}
 
-//  p {
-//    text-align: center;
-//  }
+.background {
+  border-radius: 5px;
+  box-shadow: 1px 5px 10px black;
+}
 
-//  .btnWrapper {
-//    display: flex;
-//    justify-content: center;
-//    padding-top: 10px;
-//  }
-//}
+.info-txt {
+  padding: 10px 0;
+}
 
 /* accordion */
 .accordion__item {
   display: flex;
   flex-direction: column;
 }
-
-.input {
+.weite{
   width: 100%;
 }
+.form-txt {
+  width: 100%;
+  }
 
-.send {
-  text-align: center;
+
+/*.your-sites {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.your-site {
+  padding: 5px 10px 5px 0;
+}*/
+
+.choosebutton {
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+.button {
+  margin: 10px 0;
 }
 
 /* filter and search */
 .filter {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  padding: 10px;
+  padding: 5px;
+  margin-top: 30px;
+}
+
+.filter-icons {
+  display: flex;
+  margin: 0 15px 0 15px;
+}
+
+.filter-icon {
+  height: 30px;
+  width: 30px;
+  padding: 3px 0 0 0;
+  margin: 0 15px 0 0;
+  text-align: center;
+  border: solid white 1px;
+  border-radius: 15%;
 }
 
 .filter-search {
   width: 165px;
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
 }
 
 /* Sites */
 .sites {
    display: flex;
    flex-wrap: wrap;
-   margin-top: 10px;
+   align-items: center;
+   margin-top: 20px;
 }
 
 .site {
-  height: 150px;
-  width: 151px;
+  height: 100px;
+  width: 88px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-button {
   text-align: center;
 }
