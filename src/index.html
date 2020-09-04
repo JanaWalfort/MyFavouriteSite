@@ -21,14 +21,15 @@
 
 <body>
     <div id="app">
-        <div class="tapp">
+        <div class="tapp"> <!-- tapp -->
+
             <h1>My Favourite Sites</h1>
 
             <p class="info-txt">Auf My Favourite Sites kannst du ganz einfach alle chayns Seiten ansehen und deine
                 Favouriten speichern!</p>
 
-            <div class="accordion" data-group="1">
-                <!-- Formular -->
+            <div class="accordion" data-group="1"> <!-- Formular -->
+
                 <div class="accordion__head">
                     <div class="accordion__head__icon accordion--trigger">
                         <i class="ts-angle-right"></i>
@@ -40,42 +41,36 @@
                 <div class="accordion__body">
                     <div class="accordion__item">
 
-                        <p class="form-txt">Hier kannst du einen Antrag ausfüllen um deine Seiten bei My Favourite Sites
+                        <p class="width">Hier kannst du einen Antrag ausfüllen um deine Seiten bei My Favourite Sites
                             zu speichern!
                         </p>
 
-                        <div class="input-group textInp weite">
-                            <input id="nameInput" class="input textInp" type="text" required>
+                        <div class="input-group textInp width"> <!-- inputs -->
+                            <input id="nameInput" class="input textInp" type="text">
                             <label class="user-input" for="name2"> Name </label>
                         </div>
 
-                        <div class="input-group textInp weite">
-                            <input id="emailInput" class="input textInp" type="text" required>
+                        <div class="input-group textInp width">
+                            <input id="emailInput" class="input textInp" type="text">
                             <label class="user-input" for="name2"> e-Mail </label>
                         </div>
-                        <div class="input-group textInp weite">
+
+                        <div class="input-group textInp width">
                             <input id="adressInput" class="input textInp" type="text">
                             <label class="user-input" for="name2"> Adresse </label>
                         </div>
 
+                        <div class="input-group textInp width">
+                            <input id="urlInput" class="input textInp" type="text">
+                            <label class="user-input" for="name2"> url der Seite </label>
+                        </div>
 
-                        <!-- selectbutton <SelectButton
-                                label="Select-Button"
-                                ist={list}
-                                onSelect={(value) => { console.log(value) }}
-                                listKey="id"
-                                listValue="name"/>-->
-                                
-                        <button class="choosebutton">Seite</button>
-                        <SelectButton label="Select-Button" list={list}>
+                        <div class="input-group textInp width">
+                            <input id="commentInput" class="input textInp" type="text">
+                            <label class="user-input" for="name2"> Kommentar </label>
+                        </div>
 
-                            <div class="input-group textInp weite">
-                                <input id="commentInput" class="input textInp" type="text" required>
-                                <label class="user-input" for="name2"> Kommentar </label>
-                            </div>
-
-                            <button id="send-button" class="button"> Absenden</button>
-
+                        <button id="send-button" class="button"> Absenden</button>
 
                     </div>
                 </div>
@@ -86,6 +81,7 @@
 
             <div class="background">
                 <div class="filter">
+
                     <!-- icons -->
                     <div class="filter-icons">
                         <div class="filter-icon">
@@ -105,8 +101,9 @@
                         </div>
                     </div>
                     <div class="filter-search">
+
                         <!-- search -->
-                        <div class="input-group textInp weite">
+                        <div class="input-group textInp width">
                             <input id="search" class="input textInp" type="text" placeholder='Suche'>
                         </div>
                     </div>
@@ -114,7 +111,8 @@
 
                 <div id="toSite" class="sites">
                     <!-- page icons + names -->
-                </div><!-- / sites -->
+                </div>
+                
                 <div class="more-button">
                     <button class="button" id="more">
                         Mehr
@@ -122,7 +120,9 @@
                 </div>
 
             </div> <!-- / background -->
+
         </div> <!-- / tapp -->
+        
     </div> <!-- / app -->
     <script src="https://api.chayns-static.space/js/v4.0/chayns.min.js"></script>
     <script src="https://polyfillsvc.tobit.com/polyfill.min.js?flags=gated&features=default,es6,Map,fetch"></script>

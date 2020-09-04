@@ -1,7 +1,6 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-console */
 import './app.scss';
-// import { SelectButton } from 'chayns-components';
 
 chayns.ui.initAll();
 chayns.ready.then(() => {
@@ -30,6 +29,7 @@ let counter = 0;
 let searchString = 'love';
 let timeout;
 
+
 function getData() {
    fetch(`https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=${searchString}&Skip=${counter}&Take=14`)
    .then(resp => resp.json())
@@ -38,8 +38,8 @@ function getData() {
    });
 }
 
+
 function createList(data) {
-   // eslint-disable-next-line no-plusplus
    if (data === null) {
       document.querySelector('#more').classList.add('hidden');
 
@@ -84,10 +84,13 @@ function createList(data) {
      }
      counter += 14;
 }
+
+
 function time() {
    clearTimeout(timeout);
    timeout = setTimeout(search, 1000);
 }
+
 
 async function search() {
    const { value } = document.querySelector('#search');
@@ -105,15 +108,16 @@ async function search() {
    getData(value);
 }
 
+
 function toSite() {
    const list = fetch(`https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=${searchString}&Skip=${counter}&Take=14`)
    .then(resp => resp.json())
-   // eslint-disable-next-line arrow-parens
    .then((json) => json.Data);
 
    const { siteId } = list;
    chayns.openUrlInBrowser(`https://chayns.net/${siteId}`);
 }
+
 
 function send() {
    const { firstName } = chayns.env.user;
@@ -121,23 +125,22 @@ function send() {
     const name = document.querySelector('#nameInput').value;
     const email = document.querySelector('#emailInput').value;
     const adress = document.querySelector('#adressInput').value;
+    const url = document.querySelector('#urlInput').value;
     const comment = document.querySelector('#commentInput').value;
 
-    const message = `Name: ${name}, e-Mail: ${email}, Adresse: ${adress}, url: '', Kommentar: ${comment}`;
+    const message = `Name: ${name}, e-Mail: ${email}, Adresse: ${adress}, url: ${url}, Kommentar: ${comment}`;
 
     chayns.intercom.sendMessageToPage({
       text: message
      })
      .then(() => {
-     if (name && email) {
+     if (name && email && url) {
       chayns.dialog.alert(`${firstName}, das Formular wurde abgeschickt.`);
      } else {
-      chayns.dialog.alert('Fülle bitte die Felder Name und e-Mail aus.');
+      chayns.dialog.alert('Fülle bitte die Felder Name, e-Mail und url der Seite aus.');
      }
     });
    } else {
-     chayns.dialog.alert('Login missing', 'To send a message, you have to login.');
+     chayns.dialog.alert('Login missing', 'Um das Formular abschicken zu können musst du dich anmelden.');
    }
-  }
-
-// test test
+}

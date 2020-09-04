@@ -11,17 +11,16 @@
   padding: 10px 0;
 }
 
+
 /* accordion */
 .accordion__item {
   display: flex;
   flex-direction: column;
 }
-.weite{
+
+.width{
   width: 100%;
 }
-.form-txt {
-  width: 100%;
-  }
 
 .choosebutton {
   margin-top: 20px;
@@ -31,6 +30,7 @@
 .button {
   margin: 10px 0;
 }
+
 
 /* filter and search */
 .filter {
@@ -63,6 +63,7 @@
   align-items: center;
   padding-right: 5px;
 }
+
 
 /* Sites */
 .sites {
